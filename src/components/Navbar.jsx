@@ -35,7 +35,7 @@ export default function Navbar({ theme, toggleTheme, personal }) {
             className="d-inline-flex align-items-center justify-content-center bg-primary text-white rounded-3 fs-6"
             style={{ width: '34px', height: '34px', fontWeight: 700 }}
           >
-            AM
+            WA
           </span>
           <span className="fs-5 text-reset">{personal.name}</span>
         </a>
