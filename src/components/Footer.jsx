@@ -14,7 +14,6 @@ export default function Footer({ personal }) {
               © {currentYear} All rights reserved.
             </span>
           </div>
-
           <div className="text-center text-md-end text-secondary small">
            Built with passion, powered by code, and driven by curiosity.
           </div>
