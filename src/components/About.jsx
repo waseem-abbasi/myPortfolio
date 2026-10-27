@@ -6,6 +6,8 @@ export default function About({ personal, education }) {
       <div className="container">
         {/* Section Header */}
         <div className="text-center mb-5">
+          <span className="section-label">Background</span>
+          <h2 className="section-title">About Me</h2>
           <p className="section-subtitle">
             A quick glimpse into my journey, how I approach software development, and what I enjoy outside of the editor.
           </p>
