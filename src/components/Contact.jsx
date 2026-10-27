@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import emailjs from '@emailjs/browser';
 
 export default function Contact({ personal }) {
   const [formData, setFormData] = useState({
@@ -8,25 +9,60 @@ export default function Contact({ personal }) {
     message: ''
   });
 
-  const [status, setStatus] = useState('idle'); // 'idle' | 'submitting' | 'submitted'
+  const [status, setStatus] = useState('idle'); // 'idle' | 'submitting' | 'submitted' | 'error'
+  const [errorMessage, setErrorMessage] = useState('');
   const [copied, setCopied] = useState(false);
+
+  // Read credentials exclusively from .env
+  const emailjsConfig = {
+    serviceId: import.meta.env.VITE_EMAILJS_SERVICE_ID,
+    templateId: import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+    publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+  };
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
-    console.log(e)
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console(formData)
     if (!formData.name || !formData.email || !formData.message) return;
 
     setStatus('submitting');
-    // Simulate real network request
-    setTimeout(() => {
+    setErrorMessage('');
+
+    // Prepare template params matching standard EmailJS template variable names
+    const templateParams = {
+      name: formData.name,
+      from_name: formData.name,
+      email: formData.email,
+      from_email: formData.email,
+      reply_to: formData.email,
+      subject: formData.subject.trim() || `New Portfolio Message from ${formData.name}`,
+      message: formData.message,
+      from_message: formData.message,
+      user_message: formData.message,
+      msg: formData.message,
+      content: formData.message
+    };
+
+    try {
+      await emailjs.send(
+        emailjsConfig.serviceId,
+        emailjsConfig.templateId,
+        templateParams,
+        emailjsConfig.publicKey
+      );
+
       setStatus('submitted');
-      setFormData({name: '', email: '', subject: '', message: ''});
-    }, 900);
+      setFormData({ name: '', email: '', subject: '', message: '' });
+    } catch (error) {
+      console.error('EmailJS error:', error);
+      setStatus('error');
+      setErrorMessage(
+        error?.text || 'Failed to send message. Please try again or reach out directly via email.'
+      );
+    }
   };
 
   const handleCopyEmail = () => {
@@ -56,7 +92,6 @@ export default function Contact({ personal }) {
                 <p className="text-secondary small mb-4">
                   Prefer direct email or social media? Feel free to reach out via any channel below. I typically respond within 24 hours.
                 </p>
-
                 {/* Email Copy Card */}
                 <div className="p-3 rounded-3 bg-body-tertiary border mb-4">
                   <div className="d-flex align-items-center justify-content-between gap-2">
@@ -173,6 +208,13 @@ export default function Contact({ personal }) {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit}>
+                  {status === 'error' && (
+                    <div className="alert alert-danger d-flex align-items-center gap-2 mb-3 py-2 px-3 small rounded-3">
+                      <i className="bi bi-exclamation-triangle-fill flex-shrink-0"></i>
+                      <div>{errorMessage}</div>
+                    </div>
+                  )}
+
                   <div className="row g-3">
                     <div className="col-sm-6">
                       <label htmlFor="name" className="form-label small fw-semibold">
@@ -183,6 +225,7 @@ export default function Contact({ personal }) {
                         id="name"
                         name="name"
                         required
+                        disabled={status === 'submitting'}
                         className="form-control"
                         placeholder="Jane Doe"
                         value={formData.name}
@@ -199,6 +242,7 @@ export default function Contact({ personal }) {
                         id="email"
                         name="email"
                         required
+                        disabled={status === 'submitting'}
                         className="form-control"
                         placeholder="jane@example.com"
                         value={formData.email}
@@ -214,6 +258,7 @@ export default function Contact({ personal }) {
                         type="text"
                         id="subject"
                         name="subject"
+                        disabled={status === 'submitting'}
                         className="form-control"
                         placeholder="Project inquiry / Opportunity / Hello"
                         value={formData.subject}
@@ -229,6 +274,7 @@ export default function Contact({ personal }) {
                         id="message"
                         name="message"
                         required
+                        disabled={status === 'submitting'}
                         rows="5"
                         className="form-control"
                         placeholder="Tell me a bit about what you have in mind..."
