@@ -15,9 +15,9 @@ export default function Contact({ personal }) {
 
   // Read credentials exclusively from .env
   const emailjsConfig = {
-    serviceId: import.meta.env.VITE_EMAILJS_SERVICE_ID,
+    serviceId:  import.meta.env.VITE_EMAILJS_SERVICE_ID,
     templateId: import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-    publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+    publicKey:  import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
   };
 
   const handleChange = (e) => {
@@ -90,7 +90,7 @@ export default function Contact({ personal }) {
               <div>
                 <h3 className="h5 fw-bold mb-3">Direct Contact</h3>
                 <p className="text-secondary small mb-4">
-                  Prefer direct email or social media? Feel free to reach out via any channel below. I typically respond within 24 hours.
+                  Prefer direct email or social media? Feel free to reach out via any channel below.I typically respond within 24 hours.
                 </p>
                 {/* Email Copy Card */}
                 <div className="p-3 rounded-3 bg-body-tertiary border mb-4">
@@ -101,7 +101,7 @@ export default function Contact({ personal }) {
                         href={`mailto:${personal.email}`}
                         className="fw-semibold text-reset text-truncate text-decoration-none"
                       >
-                        {personal.email}
+                        {personal.email} 
                       </a>
                     </div>
                     <button

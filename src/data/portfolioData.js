@@ -8,10 +8,10 @@ export const portfolioData = {
     ],
     location: "Ajmer,Rajasthan, CA (Open to Remote)",
     statusBadge: "Available for new projects & full-time roles",
-    email: "waseemabbasi5111@gmail.com",
-    github: "https://github.com/waseem-abbasi",
-    linkedin: "https://linkedin.com",
-    twitter: "https://twitter.com",
+    email:     "waseemabbasi5111@gmail.com",
+    github:    "https://github.com/waseem-abbasi",
+    linkedin:  "https://linkedin.com",
+    twitter:   "https://twitter.com",
     resumeUrl: "./Resume.pdf",
     stats: [
       { label: "Years Experience", value: "2+" },
@@ -114,74 +114,74 @@ export const portfolioData = {
       ]
     },
 
-    {
-      id: "craft-commerce",
-      title: "CraftStore - Minimal E-commerce",
-      category: "Full Stack",
-      subtitle: "Modern storefront template built for artisan makers",
-      description:
-        "A modern, high-speed storefront built for independent creators and makers. Includes instant faceted search, responsive slide-out cart drawer, accessible modal galleries, and Stripe checkout simulation.",
-      tags: ["React.js", "Bootstrap 5", "Stripe API", "Express", "PostgreSQL"],
-      featured: true,
-      github: "https://github.com/example/craft-commerce",
-      demo: "https://example.com/craft-commerce",
-      highlights: [
-        "Scored 99/100 on Google Lighthouse for performance and accessibility",
-        "Accessible modal view and image carousel with touch gestures",
-        "Zero layout shifts during image and price loading"
-      ]
-    },
-    {
-      id: "paper-docs",
-      title: "PaperLog Documentation Reader",
-      category: "Tools",
-      subtitle: "Clean technical reading interface with markdown parsing",
-      description:
-        "A reading interface for engineering docs and changelogs. Features auto-generated sticky table of contents, syntax highlighting with copy-paste actions, reading time estimation, and font sizing controls.",
-      tags: ["React.js", "Bootstrap 5", "PrismJS", "Markdown", "Web Storage"],
-      featured: false,
-      github: "https://github.com/example/paper-docs",
-      demo: "https://example.com/paper-docs",
-      highlights: [
-        "Dynamic table of contents with smooth scroll-spy highlighting",
-        "One-click code snippet copy with visual feedback toast",
-        "Customizable reading width and typography settings"
-      ]
-    },
-    {
-      id: "weather-minimal",
-      title: "Atmosphere Micro-Weather",
-      category: "Frontend",
-      subtitle: "Glanceable local weather with radar maps and air quality",
-      description:
-        "A minimalist weather web app that prioritizes clarity over visual clutter. Provides hourly forecasts, rain probability timelines, and UV index guidance using Open-Meteo's open API.",
-      tags: ["React.js", "Bootstrap 5", "Open-Meteo API", "Geolocation API"],
-      featured: false,
-      github: "https://github.com/example/atmosphere",
-      demo: "https://example.com/atmosphere",
-      highlights: [
-        "Zero API keys required by utilizing open weather data sources",
-        "GPS auto-detection with city search fallback and saved favorites",
-        "Responsive cards that scale gracefully down to 320px screens"
-      ]
-    },
-    {
-      id: "snippet-vault",
-      title: "SnippetVault CLI & Web Extension",
-      category: "Tools",
-      subtitle: "Cross-platform code snippet organizer for busy devs",
-      description:
-        "A utility to store, tag, and instantly retrieve reusable code snippets, shell commands, and regex patterns. Includes smart keyword tagging and single-click copy.",
-      tags: ["React.js", "Bootstrap 5", "Chrome Extensions API", "TypeScript"],
-      featured: false,
-      github: "https://github.com/example/snippet-vault",
-      demo: "https://example.com/snippet-vault",
-      highlights: [
-        "Fuzzy search algorithm matching tags, languages, and comments",
-        "Export and import snippet collections as portable JSON files",
-        "Keyboard shortcut for rapid insertion into active editors"
-      ]
-    }
+    // {
+    //   id: "craft-commerce",
+    //   title: "CraftStore - Minimal E-commerce",
+    //   category: "Full Stack",
+    //   subtitle: "Modern storefront template built for artisan makers",
+    //   description:
+    //     "A modern, high-speed storefront built for independent creators and makers. Includes instant faceted search, responsive slide-out cart drawer, accessible modal galleries, and Stripe checkout simulation.",
+    //   tags: ["React.js", "Bootstrap 5", "Stripe API", "Express", "PostgreSQL"],
+    //   featured: true,
+    //   github: "https://github.com/example/craft-commerce",
+    //   demo: "https://example.com/craft-commerce",
+    //   highlights: [
+    //     "Scored 99/100 on Google Lighthouse for performance and accessibility",
+    //     "Accessible modal view and image carousel with touch gestures",
+    //     "Zero layout shifts during image and price loading"
+    //   ]
+    // },
+    // {
+    //   id: "paper-docs",
+    //   title: "PaperLog Documentation Reader",
+    //   category: "Tools",
+    //   subtitle: "Clean technical reading interface with markdown parsing",
+    //   description:
+    //     "A reading interface for engineering docs and changelogs. Features auto-generated sticky table of contents, syntax highlighting with copy-paste actions, reading time estimation, and font sizing controls.",
+    //   tags: ["React.js", "Bootstrap 5", "PrismJS", "Markdown", "Web Storage"],
+    //   featured: false,
+    //   github: "https://github.com/example/paper-docs",
+    //   demo: "https://example.com/paper-docs",
+    //   highlights: [
+    //     "Dynamic table of contents with smooth scroll-spy highlighting",
+    //     "One-click code snippet copy with visual feedback toast",
+    //     "Customizable reading width and typography settings"
+    //   ]
+    // },
+    // {
+    //   id: "weather-minimal",
+    //   title: "Atmosphere Micro-Weather",
+    //   category: "Frontend",
+    //   subtitle: "Glanceable local weather with radar maps and air quality",
+    //   description:
+    //     "A minimalist weather web app that prioritizes clarity over visual clutter. Provides hourly forecasts, rain probability timelines, and UV index guidance using Open-Meteo's open API.",
+    //   tags: ["React.js", "Bootstrap 5", "Open-Meteo API", "Geolocation API"],
+    //   featured: false,
+    //   github: "https://github.com/example/atmosphere",
+    //   demo: "https://example.com/atmosphere",
+    //   highlights: [
+    //     "Zero API keys required by utilizing open weather data sources",
+    //     "GPS auto-detection with city search fallback and saved favorites",
+    //     "Responsive cards that scale gracefully down to 320px screens"
+    //   ]
+    // },
+    // {
+    //   id: "snippet-vault",
+    //   title: "SnippetVault CLI & Web Extension",
+    //   category: "Tools",
+    //   subtitle: "Cross-platform code snippet organizer for busy devs",
+    //   description:
+    //     "A utility to store, tag, and instantly retrieve reusable code snippets, shell commands, and regex patterns. Includes smart keyword tagging and single-click copy.",
+    //   tags: ["React.js", "Bootstrap 5", "Chrome Extensions API", "TypeScript"],
+    //   featured: false,
+    //   github: "https://github.com/example/snippet-vault",
+    //   demo: "https://example.com/snippet-vault",
+    //   highlights: [
+    //     "Fuzzy search algorithm matching tags, languages, and comments",
+    //     "Export and import snippet collections as portable JSON files",
+    //     "Keyboard shortcut for rapid insertion into active editors"
+    //   ]
+    // }
   ],
 
   experience: [
