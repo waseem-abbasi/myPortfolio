@@ -293,12 +293,12 @@ export const portfolioData = {
     {
       degree: "bachelor of commerce",
       institution: "Maharshi Dayanand University",
-      period: "2016 - 2020"
+      period: "2019 - 2022"
     },
     {
       degree: "ICST",
       institution: "Star Infotech College Ajmer",
-      period: "2021-2022"
+      period: "2022-2023"
     }
   ]
 };

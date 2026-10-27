@@ -100,7 +100,7 @@ export default function Hero({ personal }) {
                 </div>
                 <div>
                   <h4 className="fw-bold mb-1">{personal.name}</h4>
-                  <p className="text-secondary small mb-2">Web Application Developer</p>
+                  <p className="text-secondary small mb-2">Full Stack Developer</p>
                   <span className="badge bg-primary-subtle text-primary border border-primary-subtle px-2 py-1">
                     <i className="bi bi-geo-alt-fill me-1"></i> Ajmer,Rajasthan / Remote
                   </span>
