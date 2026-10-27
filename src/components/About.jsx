@@ -5,6 +5,7 @@ export default function About({ personal, education }) {
     <section id="about" className="bg-body-tertiary">
       <div className="container">
         {/* Section Header */}
+        
         <div className="text-center mb-5">
           <span className="section-label">Background</span>
           <h2 className="section-title">About Me</h2>
